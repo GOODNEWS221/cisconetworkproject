@@ -1,0 +1,19 @@
+BGP Per-VRF Redistribution Example
+router bgp 100
+ bgp log-neighbor-changes
+ no bgp default ipv4-unicast
+
+ neighbor 2.2.2.2 remote-as 100
+ neighbor 2.2.2.2 update-source Loopback1
+
+address-family vpnv4
+  neighbor 2.2.2.2 activate
+  neighbor 2.2.2.2 send-community extended
+ exit-address-family
+
+
+ address-family ipv4 vrf SGG_EDO
+  redistribute connected
+  redistribute eigrp 100
+ Exit-address-family
+
