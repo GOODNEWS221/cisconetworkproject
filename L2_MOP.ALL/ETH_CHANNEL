@@ -1,0 +1,16 @@
+
+CREATE ETH CHANNEL
+interface Port-channel 1
+switchport mode trunk  ! Or access, depending on need
+description LACP Port-Channel to SW-X
+
+BIND TO AN INTERFACE
+
+interface range GigabitEthernet0/1 - 2
+channel-group 1 mode active/passive/auto/desirable
+Exit
+
+Verification:
+Switch# show etherchannel summary
+Switch# show interfaces port-channel 1
+Switch# show lacp neighbor

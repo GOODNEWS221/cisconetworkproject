@@ -1,0 +1,12 @@
+CDP (Cisco Discovery Protocol – Cisco Proprietary)
+
+Enable CDP Globally:
+cdp run
+
+Enable on Specific Interfaces (optional):
+interface range GigabitEthernet0/1 - 2
+cdp enable
+
+Verification:
+show cdp neighbors
+show cdp neighbors detail

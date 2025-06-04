@@ -1,0 +1,49 @@
+STP
+Standard STP
+spanning-tree mode stp
+
+Rapid STP
+spanning-tree mode rapid-pvst
+
+SETTING ROOT BRIDGE
+spanning-tree vlan [vlan-id] priority 4096
+
+Verify:
+show spanning-tree summary
+show spanning-tree vlan [vlan-id)
+
+
+MSTP (Multiple Spanning Tree Protocol – 802.1s)
+
+spanning-tree mode mst
+spanning-tree mst configuration
+name MST-DOMAIN
+revision 1
+instance 1 vlan 10,20
+instance 2 vlan 30-40
+exit
+
+
+Set root bridge per instance
+spanning-tree mst 1 priority 4096
+spanning-tree mst 2 priority 8192
+
+Verify
+
+show spanning-tree mst configuration
+show spanning-tree mst
+show spanning-tree mst [instance-number]
+
+PVST+ (Per VLAN Spanning Tree Plus – Cisco proprietary)
+
+spanning-tree mode pvst
+
+Set root bridge
+
+spanning-tree vlan [vlan-id] root primary
+spanning-tree vlan [vlan-id] root secondary
+
+Verify:
+
+show spanning-tree vlan [vlan-id]
+Switch# show spanning-tree summary

@@ -1,0 +1,22 @@
+VLAN
+
+Configuration:
+vlan id
+name HR
+exit
+
+Assign Access Ports to VLANs
+
+Switch(config)# interface range GigabitEthernet0/1 - 2
+Switch(config-if-range)# switchport mode access
+Switch(config-if-range)# switchport access vlan 10
+Switch(config-if-range)# description HR Department
+Switch(config-if-range)# exit
+
+Configure Trunk Ports for Inter-switch Links
+
+interface GigabitEthernet0/24
+switchport trunk encapsulation dot1q    ! If required
+switchport mode trunk
+switchport trunk allowed vlan 10,20
+description Uplink to Core/Distribution Switch
