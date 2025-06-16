@@ -24,4 +24,5 @@ Also an access-list was configured to make sure that only the TECH department ca
 - 🔌 SVI-based routing and IP addressing
 
 
-![images alt](
+![images alt](https://github.com/GOODNEWS221/cisconetworkproject/blob/d5439c119343802d9ace01f8af39da2f37e0fa7c/NEWTECH_ENT/NEWTECH_PING.png)
+
