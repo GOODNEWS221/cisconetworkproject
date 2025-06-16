@@ -1,3 +1,6 @@
+![image alt](https://github.com/GOODNEWS221/cisconetworkproject/blob/84fe435a8432bc0a0dac822d7afb99b549327c9d/NEWTECH_ENT/NEWTECH_PNG.png)
+
+
 This topology has 1 ISP CE routers, 2 LAN Routers, 1 Switch, 4 LAN, 4 voice VLAN
 
 The configurations include DHCP,NAT,SSH,AAA,HSRP,EIGRP,VLANS,DNS,STP,PORT SECURITY
